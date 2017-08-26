@@ -1,5 +1,6 @@
 package com.jiayuan.mainframework.view.fragment;
 
+import android.content.Intent;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -11,11 +12,14 @@ import com.jiayuan.mainframework.base.BaseFragment;
 import com.jiayuan.mainframework.presenter.impl.HomePresenterIpml;
 import com.jiayuan.mainframework.utils.ToastUtils;
 import com.jiayuan.mainframework.view.viewinterface.HomeFragmentView;
+import com.uuzuche.lib_zxing.activity.CaptureActivity;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.OnClick;
+
+import static com.jiayuan.mainframework.base.BaseActivity.REQUEST_SCAN_CODE;
 
 /**
  * Created by guojiayuan on 2017/8/22.
@@ -63,12 +67,14 @@ public class HomeFragment extends BaseFragment implements SwipeRefreshLayout.OnR
         @Override
         @OnClick({R.id.home_btn_scan2x, R.id.home_btn_promo_code2x, R.id.home_btn_announcement2x, R.id.home_btn_all2x})
         public void onClick(View v) {
+            Intent intent = null;
             switch (v.getId()) {
                 case R.id.home_btn_scan2x://扫一扫
-                    ToastUtils.showToast(mContext, "点击了扫一扫");
+                    intent = new Intent(mContext, CaptureActivity.class);
+                    startActivityForResult(intent, REQUEST_SCAN_CODE);
                     break;
                 case R.id.home_btn_promo_code2x://推广码
-                    ToastUtils.showToast(mContext, "点击了推广码");
+                    ToastUtils.showToast(mContext, "在我的界面生成二维码");
                     break;
                 case R.id.home_btn_announcement2x:
                     ToastUtils.showToast(mContext, "点击了公告");
