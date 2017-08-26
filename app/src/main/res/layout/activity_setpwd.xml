@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="#ffffff"
+              android:clipToPadding="true"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <!--标题-->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ffffff">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="设置密码"
+            android:textColor="#333333"
+            android:textSize="19sp"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <!--!-短信验证码-&ndash;&gt;-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textview2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="15dp"
+                android:text="验证码"
+                android:textColor="#333333"
+                android:textSize="18sp"/>
+
+            <!--短信验证码只有4位-->
+
+            <EditText
+                android:id="@+id/SMSValidation"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/textview2"
+                android:layout_toRightOf="@id/textview2"
+                android:background="@null"
+                android:hint="短信验证码"
+                android:maxLength="4"
+                android:singleLine="true"
+                android:textColor="#999999"/>
+
+            <TextView
+                android:id="@+id/getValidation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:clickable="true"
+                android:text="获取验证码"
+                android:textColor="#3a85d0"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ff0000"/>
+    </LinearLayout>
+
+    <!--!-设置密码-&ndash;&gt;-->
+    <!--!-设置密码-&ndash;&gt;-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textview3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="15dp"
+                android:text="设置密码"
+                android:textColor="#333333"
+                android:textSize="18sp"/>
+
+
+            <EditText
+                android:id="@+id/setPwd"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/textview3"
+                android:layout_toRightOf="@id/textview3"
+                android:background="@null"
+                android:hint="6-20位字母、数字组合"
+                android:maxLength="20"
+                android:singleLine="true"
+                android:textColor="#999999"/>
+
+            <!--切换显示隐藏-->
+            <ImageButton
+                android:id="@+id/pwd_visible"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@null"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ff0000"/>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <ImageButton
+            android:id="@+id/imagebutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"/>
+
+
+        <TextView
+            android:id="@+id/read"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/imagebutton"
+            android:text="阅读并接受"/>
+
+        <Button
+            android:id="@+id/cloudAgreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/read"
+            android:layout_toRightOf="@id/read"
+            android:background="@null"
+            android:padding="3dp"
+            android:text="《云消费用户协议》"
+            android:textColor="#3a85d0"/>
+    </RelativeLayout>
+
+    <!--底部-->
+    <Button
+        android:id="@+id/btn_regist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@mipmap/login_btn3x"
+        android:text="注册"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"/>
+
+</LinearLayout>
+
+
+

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">主框架</string>
+
+    <string name="retry">网络状况待提升，点击重试</string>
+
+    <!--behavior-->
+    <string name="simple_view_behavior">com.jiayuan.mainframework.widget.SimpleViewBehavior</string>
+    <string name="translate_up_down_behavior">com.jiayuan.mainframework.widget.TranslateUpDownBehavior</string>
+</resources>

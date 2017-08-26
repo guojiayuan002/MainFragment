@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:clickable="true"
+              android:orientation="vertical">
+
+    <!--表格图-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#ffffff"
+        android:clickable="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/home_btn_scan2x"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/home_btn_scan2x"/>
+
+            <TextView
+                android:layout_marginTop="3dp"
+                android:textColor="#666"
+                android:textSize="14.2sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="扫一扫"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/home_btn_promo_code2x"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/home_btn_promo_code2x"/>
+
+            <TextView
+                android:layout_marginTop="3dp"
+                android:textSize="14.2sp"
+                android:textColor="#666"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="推广码"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/home_btn_announcement2x"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/home_btn_announcement2x"/>
+
+            <TextView
+                android:layout_marginTop="3dp"
+                android:textSize="14.2sp"
+                android:textColor="#666"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="公告"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/home_btn_all2x"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/home_btn_all2x"/>
+
+            <TextView
+                android:layout_marginTop="3dp"
+                android:textSize="14.2sp"
+                android:textColor="#666"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="全部"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <!--跑马灯-->
+    <!--背景：android:background="@drawable/xml_oval_half_transparent_bg"-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="8dp">
+
+        <ImageView
+            android:id="@+id/iv_loudspeaker4"
+            android:layout_width="17dp"
+            android:layout_height="16dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/home_btn_message"/>
+
+        <!--运用要改包名，自定义控件-->
+        <!--<consumption.yun.com.cloudconsumption.view.widget.MarqueeView-->
+            <!--android:id="@+id/marqueeView"-->
+            <!--android:layout_width="300dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="8dp"-->
+            <!--android:layout_toRightOf="@+id/iv_loudspeaker4"-->
+            <!--app:mvAnimDuration="500"-->
+            <!--app:mvInterval="2000"-->
+            <!--app:mvTextColor="@color/red"/>-->
+    </RelativeLayout>
+
+</LinearLayout>
